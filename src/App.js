@@ -1,7 +1,6 @@
-import './App.css';
-import Buttons from './components/Buttons';
-import React, { useState } from 'react';
-
+import "./App.css";
+import Buttons from "./components/Buttons";
+import React, { useState } from "react";
 
 function App() {
   const [numbers, setNumbers] = useState([0, ""]);
@@ -10,7 +9,7 @@ function App() {
   const reset = () => {
     setNumbers([0, ""]);
     setOperation("");
-  }
+  };
 
   const handleClick = (e) => {
     let type = e.target.getAttribute("data-attr");
@@ -37,7 +36,6 @@ function App() {
     if (type === "percent") {
       setNumbers([numbers[0] / 100, ""]);
     }
-
 
     if (type === "operation") {
       setOperation(e.target.innerText);
@@ -81,12 +79,10 @@ function App() {
         setNumbers([numbers[0], ""]);
       }
     }
-
-
-  }
+  };
   return (
     <div className="body">
-    <h2>Version2</h2>
+      <h2>Version2 - byadem & bytalha</h2>
       <Buttons onClick={handleClick} numbers={numbers} operation={operation} />
     </div>
   );
